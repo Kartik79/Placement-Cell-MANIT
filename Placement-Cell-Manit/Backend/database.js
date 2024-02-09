@@ -1,11 +1,11 @@
-const { MongoClient } = require("mongodb");
+import { MongoClient } from "mongodb";
 
 // Replace the uri string with your connection string.
 const uri = "mongodb+srv://tiwarikartik434:chintu@cluster0.eh3cyrt.mongodb.net/";
 
 const client = new MongoClient(uri);
 
-exports.connect= async function run() {
+export async function connect() {
   try {
     const database = client.db('Placement-Cell');
     const movies = database.collection('Project');
